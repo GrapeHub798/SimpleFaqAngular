@@ -1,0 +1,11 @@
+<div class="row">
+  <div *ngIf="question" class="col">
+    <text-with-arrow (toggleCollapseOnParent)="toggleCollapse($event)" [hasArrow]="true" [isCollapsed]="isCollapsed" [text]="question.question"/>
+    <div *ngIf="!isCollapsed">
+      <text-with-arrow [text]="question.answer"/>
+    </div>
+  </div>
+  <div *ngIf="!question" class="col">
+    Missing Question
+  </div>
+</div>

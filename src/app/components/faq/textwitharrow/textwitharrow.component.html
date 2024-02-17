@@ -1,0 +1,9 @@
+<div (click)="toggleCollapse()"  class="row">
+  <div *ngIf="hasArrow" class="col-1">
+    <fa-icon *ngIf="isCollapsed" [icon]="faChevronRight"></fa-icon>
+    <fa-icon *ngIf="!isCollapsed" [icon]="faChevronDown"></fa-icon>
+  </div>
+  <div [ngClass]="{'col' : hasArrow, 'col-10 offset-1 text-is-answer' : !hasArrow}">
+    {{text}}
+  </div>
+</div>
